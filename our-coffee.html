@@ -70,13 +70,16 @@
     }
 
     function makeCoffee(drinkType){
-        $('#coffee-image').attr('src', 'static/coffee_machine.jpg');
+        $('#coffee-image').fadeOut(500)
         setTimeout(function (){
-            $('#coffee-image').attr('src', 'static/'+drinkType+'.jpg');
-            }, 1000);
+            $('#coffee-image').attr('src', 'static/coffee_machine.jpg').fadeIn(500).delay(500).fadeOut(500);
+            }, 500);
         setTimeout(function (){
-            $('#coffee-image').attr('src', 'static/coffee_beans.jpg');
-            }, 2500);
+            $('#coffee-image').attr('src', 'static/'+drinkType+'.jpg').fadeIn(500).delay(500).fadeOut(500);
+            }, 2000);
+        setTimeout(function (){
+            $('#coffee-image').attr('src', 'static/coffee_beans.jpg').fadeIn(500);
+            }, 3500);
 
         drinksOrdered.push(drinkType);
         console.log(drinksOrdered);
