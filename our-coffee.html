@@ -53,7 +53,7 @@
         "brew": 2.05,
         "espresso": 3.25,
         "latte": 4.15,
-        "hot chocolate": 2.50
+        "hot-chocolate": 2.50
     };
 
     function revenue(drinksOrdered){
@@ -72,11 +72,11 @@
     function makeCoffee(drinkType){
         $('#coffee-image').attr('src', 'static/coffee_machine.jpg');
         setTimeout(function (){
-            $('#coffee-image').attr('src', 'static/coffee_mug.jpg');
+            $('#coffee-image').attr('src', 'static/'+drinkType+'.jpg');
             }, 1000);
         setTimeout(function (){
             $('#coffee-image').attr('src', 'static/coffee_beans.jpg');
-            }, 1500);
+            }, 2500);
 
         drinksOrdered.push(drinkType);
         console.log(drinksOrdered);
@@ -96,7 +96,7 @@
                                 return makeCoffee('latte');
                              });
     $('#hot-chocolate').click(function (){ 
-                                return makeCoffee('hot chocolate');
+                                return makeCoffee('hot-chocolate');
                              });
 
 </script>

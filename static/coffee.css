@@ -1,6 +1,8 @@
 body {
   padding-top: 50px;
   font-family: 'Raleway', sans-serif;
+  background-image: url('static/background.jpg');
+  background-repeat: no-repeat;
 }
 
 .starter-template {
